@@ -66,6 +66,26 @@ Uhh no... write your own:
 grunt beep:**-*-**-*--**-*-**-*
 ```
 
+> Okay... how about only when Grunt has an error or warning?
+
+Good idea!
+
+```js
+grunt.initConfig({
+  watch: {
+    files: ['*'],
+    // only beep if jshint had an error (works with --force too!)
+    tasks: ['jshint', 'beep:error'],
+  },
+});
+```
+
+or beep 3 times if jshint has a warning but only 2 if nodeunit has an error:
+
+```shell
+grunt jshint beep:warn:3 nodeunit beep:error:2
+```
+
 ## Release History
 * 0.2.0 - needs more beeps
 * 0.1.0 - let there be beeps
