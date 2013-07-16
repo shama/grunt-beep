@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     twobits: '*-**-*-*---*-*-'
   };
 
-  grunt.registerTask('beep', function(what) {
+  grunt.registerTask('beep', function(what, n) {
     var done = this.async();
     var queue = grunt.util.async.queue(function(note, next) {
       if (note !== '-') {
@@ -21,17 +21,25 @@ module.exports = function(grunt) {
       done();
     };
 
+    function beep(x) {
+      for (var i = 0; i < x; i++) queue.push('*');
+    }
+
     what = what || 1;
     var many = parseInt(what);
     if (isNaN(many)) {
-      if (beepers[what]) {
-        what = beepers[what];
+      if (what === 'error') {
+        if (grunt.fail.errorcount > 0) beep(n || 1);
+      } else if (what === 'warn') {
+        if (grunt.fail.warncount > 0) beep(n || 1);
+      } else {
+        if (beepers[what]) {
+          what = beepers[what];
+        }
+        queue.push(what.split(''));
       }
-      queue.push(what.split(''));
     } else {
-      for (var i = 0; i < many; i++) {
-        queue.push('*');
-      }
+      beep(many);
     }
   });
 };
