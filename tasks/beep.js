@@ -41,5 +41,10 @@ module.exports = function(grunt) {
     } else {
       beep(many);
     }
+
+    if (queue.length() === 0) {
+      done();
+    }
+
   });
 };
