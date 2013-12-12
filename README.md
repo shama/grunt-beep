@@ -87,6 +87,7 @@ grunt jshint beep:warn:3 nodeunit beep:error:2
 ```
 
 ## Release History
+* 0.3.1 - Close out async done() if queue.length() is zero. (@gcpantazis)
 * 0.3.0 - needs smarter beeps
 * 0.2.0 - needs more beeps
 * 0.1.0 - let there be beeps
