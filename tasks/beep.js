@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     twobits: '*-**-*-*---*-*-'
   };
 
-  grunt.registerTask('beep', function(what, n) {
+  grunt.registerTask('beep', 'It beeps.', function(what, n) {
     var done = this.async();
     var queue = grunt.util.async.queue(function(note, next) {
       if (note !== '-') {
