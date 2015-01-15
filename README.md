@@ -74,6 +74,8 @@ Good idea!
 grunt.initConfig({
   watch: {
     files: ['*'],
+    // make sure you don't have spawn: false or else whenever jshint has an error,
+    // beep:error will always be executed. Check https://github.com/shama/grunt-beep/issues/6 for reference.
     // only beep if jshint had an error (works with --force too!)
     tasks: ['jshint', 'beep:error'],
   },
