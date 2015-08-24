@@ -58,6 +58,12 @@ Umm how about that "charge" one?
 grunt beep:charge
 ```
 
+Or "jaws"
+
+```shell
+grunt beep:jaws
+```
+
 > Any more?
 
 Uhh no... write your own:
