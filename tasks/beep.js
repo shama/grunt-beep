@@ -3,6 +3,7 @@ module.exports = function(grunt) {
     charge: '****-*-*',
     // shave and a haircut, two bits :D
     twobits: '*-**-*-*---*-*-'
+    jaws: '**----**----**---**---**--**--**-******'
   };
 
   grunt.registerTask('beep', 'It beeps.', function(what, n) {
