@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   var beepers = {
     charge: '****-*-*',
     // shave and a haircut, two bits :D
-    twobits: '*-**-*-*---*-*-'
+    twobits: '*-**-*-*---*-*-',
     jaws: '**----**----**---**---**--**--**-******'
   };
 
