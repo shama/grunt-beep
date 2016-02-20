@@ -102,5 +102,5 @@ grunt jshint beep:warn:3 nodeunit beep:error:2
 * 0.1.0 - let there be beeps
 
 ## License
-Copyright (c) 2013 Kyle Robinson Young  
+Copyright (c) 2016 Kyle Robinson Young  
 Licensed under the MIT license.
