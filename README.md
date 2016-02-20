@@ -95,6 +95,7 @@ grunt jshint beep:warn:3 nodeunit beep:error:2
 ```
 
 ## Release History
+* 1.0.0 - Peer deps are now `grunt>=0.4.0`
 * 0.3.2 - Fix syntax error (@toverux).
 * 0.3.1 - Close out async done() if queue.length() is zero. (@gcpantazis)
 * 0.3.0 - needs smarter beeps
